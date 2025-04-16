@@ -22,10 +22,12 @@ func main() {
 	modelPath := "school_recommender_mlp.onnx"
 
 	// --- Input: original student data
-	rawInput := []float32{97, 91, 58, 443.45}
+	rawInput := []float32{97, 91, 58, 107.76574571313512, -6.956058741464109, 443.45}
 
 	// --- Weights (sqrt([0.2, 0.2, 0.2, 0.4]))
 	weights := []float32{
+		float32(math.Sqrt(0.2)),
+		float32(math.Sqrt(0.2)),
 		float32(math.Sqrt(0.2)),
 		float32(math.Sqrt(0.2)),
 		float32(math.Sqrt(0.2)),
